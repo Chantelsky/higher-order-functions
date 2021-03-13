@@ -12,8 +12,8 @@ console.log('Hello, world!');
 const addTwo = (num) => num + 2;
 
 // To check if you've completed this function, uncomment these console.logs!
-// console.log(addTwo(3));
-// console.log(addTwo(10));
+console.log(addTwo(3));
+console.log(addTwo(10));
 
 
 // Challenge 2
@@ -21,8 +21,8 @@ const addTwo = (num) => num + 2;
 const addS = (word) => word + "s";
 
 // Uncomment these to check your work
-// console.log(addS('pizza'));
-// console.log(addS('bagel'));
+console.log(addS('pizza'));
+console.log(addS('bagel'));
 
 
 // Challenge 3
@@ -34,16 +34,23 @@ const map = (array, callback) => {
   return newArray;
 };
 
-// console.log(map([1, 2, 3], addTwo));
+console.log(map([1, 2, 3], addTwo));
 
 
 // Challenge 4
 const forEach = (array, callback) => {
-
+  for (let i = 0; i < array.length; i++) {
+    callback(array[i])
+  }
 };
 
 // See for yourself if your forEach works!
-
+let alphabet = '';
+const letters = ['a', 'b', 'c', 'd'];
+forEach(letters, function (char) {
+  alphabet += char;
+});
+console.log(alphabet);
 
 
 // Challenge 5
