@@ -9,9 +9,7 @@ console.log('Hello, world!');
 
 // Challenge 1
 //Create a function addTwo that accepts one input and adds 2 to it.
-const addTwo = (num) => {
-  return num + 2
-};
+const addTwo = (num) => num + 2;
 
 // To check if you've completed this function, uncomment these console.logs!
 // console.log(addTwo(3));
@@ -20,9 +18,7 @@ const addTwo = (num) => {
 
 // Challenge 2
 //Create a function addS that accepts one input and adds an "s" to it.
-const addS = (word) => {
-  return word + "s"
-};
+const addS = (word) => word + "s";
 
 // Uncomment these to check your work
 // console.log(addS('pizza'));
@@ -31,7 +27,11 @@ const addS = (word) => {
 
 // Challenge 3
 const map = (array, callback) => {
-
+  const newArray = [];
+  for (let i = 0; i < array.length; i++) {
+    newArray.push(callback(array[i]));
+  }
+  return newArray;
 };
 
 // console.log(map([1, 2, 3], addTwo));
