@@ -27,7 +27,7 @@ console.log(addS('bagel'));
 
 // Challenge 3
 const map = (array, callback) => {
-  const newArray = [];
+  let newArray = [];
   for (let i = 0; i < array.length; i++) {
     newArray.push(callback(array[i]));
   }
@@ -55,7 +55,7 @@ console.log(alphabet);
 
 // Challenge 5
 const mapWith = (array, callback) => {
-  const newerArray = [];
+  let newerArray = [];
   forEach(array, (item) => {
     newerArray.push(callback(item));
   })
@@ -79,6 +79,7 @@ console.log(reduce(nums, add, 0));
 
 
 // Challenge 7
+//Construct a function intersection that compares input arrays and returns a new array with elements found in all of the inputs. BONUS: Use reduce!
 const intersection = (arrays) => {
 
 };
