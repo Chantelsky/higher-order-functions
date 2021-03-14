@@ -102,6 +102,33 @@ function union(...arrays) {
 console.log(union([5, 10, 15], [15, 88, 1, 5, 7], [100, 15, 10, 1, 5]));
 // should log: [5, 10, 15, 88, 1, 7, 100]
 
+//using a for loop and removing multiple arrays.
+function union(array) {
+  const result = [];
+  for (let i = 0; i < array.length; i++) {
+    let exists = false;
+    for (let j = 0; j < array.length; j++) {
+      if (array[i] === result[j]) {
+        exists = true;
+        break;
+      }
+    }
+    if (!exists) {
+      result.push(array[i]);
+    }
+  }
+  return result;
+}
+
+console.log(union([5, 10, 15, 15, 88, 1, 5, 7, 100, 15, 10, 1, 5]));
+
+//trying with a forEach
+function union(array) {
+  let result = []
+  array.forEach((item, index) => { if (array.indexOf(item) == index) result.push(item) });
+  return result;
+}
+console.log(union([5, 10, 15, 15, 88, 1, 5, 7, 100, 15, 10, 1, 5]));
 
 // Challenge 9
 const objOfMatches = (array1, array2, callback) => {
