@@ -55,14 +55,27 @@ console.log(alphabet);
 
 // Challenge 5
 const mapWith = (array, callback) => {
-
+  const newerArray = [];
+  forEach(array, (item) => {
+    newerArray.push(callback(item));
+  })
+  return newerArray;
 };
+console.log(mapWith([1, 2, 3], addTwo));
 
 
 // Challenge 6
-const reduce = (array, callback, initialValue) => {
+// const reducer = (accumulator, currentValue) => accumulator + currentValue;
+function reduce(array, callback, initialValue) {
+  for (let i = 0; i < array.length; i++) {
+    initialValue = callback(initialValue, array[i]);
+  }
+  return initialValue;
+}
 
-};
+const nums = [4, 1, 3];
+const add = (a, b) => a + b;
+console.log(reduce(nums, add, 0));
 
 
 // Challenge 7
